@@ -1,0 +1,40 @@
+{
+  "url": "https://www.wanglanxin.com",
+  "server": {
+    "port": 2368,
+    "host": "127.0.0.1"
+  },
+  "database": {
+    "client": "mysql",
+    "connection": {
+      "host": "localhost",
+      "user": "ghost-283",
+      "password": "pass",
+      "database": "ghost"
+    }
+  },
+  "mail": {
+    "transport": "Direct",
+    "options": {
+      "service": "Mailgun",
+      "auth": {
+        "user": "admin@wanglanxin.com",
+        "pass": "pass"
+      }
+    }
+  },
+  "logging": {
+    "transports": [
+      "file",
+      "stdout"
+    ]
+  },
+  "process": "systemd",
+  "paths": {
+    "contentPath": "/var/www/ghost/content"
+  },
+  "bootstrap-socket": {
+    "port": 8000,
+    "host": "localhost"
+  }
+}

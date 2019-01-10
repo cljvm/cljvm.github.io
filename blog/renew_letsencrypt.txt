@@ -1,0 +1,2 @@
+#90天更新一次证书(cron任务)
+sudo certbot renew

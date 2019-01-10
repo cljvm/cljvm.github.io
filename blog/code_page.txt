@@ -1,0 +1,39 @@
+活动页面代码
+chcp: change code page
+
+切换到UTF-8字符编集
+chcp 65001
+
+Code Page charset 语种 
+
+708 ASMO-708 阿拉伯字符 (ASMO 708)
+720 DOS-720 阿拉伯字符 (DOS)
+28596 iso-8859-6 阿拉伯字符 (ISO)
+1256 windows-1256 阿拉伯字符 (Windows)
+1257 windows-1257 波罗的海字符 (Windows)
+852 ibm852 中欧字符 (DOS)
+28592 iso-8859-2 中欧字符 (ISO)
+1250 windows-1250 中欧字符 (Windows)
+936 gb2312 简体中文 (GB2312)
+950 big5 繁体中文 (Big5)
+862 DOS-862 希伯来字符 (DOS)
+866 cp866 西里尔字符 (DOS)
+874 windows-874 泰语 (Windows)
+932 shift_jis 日语 (Shift-JIS)
+949 ks_c_5601-1987 朝鲜语
+1251 windows-1251 西里尔字符 (Windows)
+1252 iso-8859-1 西欧字符
+1253 windows-1253 希腊字符 (Windows)
+1254 iso-8859-9 土耳其字符 (Windows)
+1255 windows-1255 希伯来字符 (Windows)
+1258 windows-1258 越南字符 (Windows)
+20866 koi8-r 西里尔字符 (KOI8-R)
+21866 koi8-ru 西里尔字符 (KOI8-U)
+28595 iso-8859-5 西里尔字符 (ISO)
+28597 iso-8859-7 希腊字符 (ISO)
+28598 iso-8859-8 希伯来字符 (ISO-Visual)
+38598 iso-8859-8-i 希伯来字符 (ISO-Logical)
+50932 _autodetect 日语 (自动选择)
+51932 euc-jp 日语 (EUC)
+52936 hz-gb-2312 简体中文 (HZ)
+65001 utf-8 Unicode (UTF-8) 

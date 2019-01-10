@@ -1,0 +1,36 @@
+1、安装vcpkg，网址 ：https://github.com/Microsoft/vcpkg
+
+Prerequisites:
+
+Windows 10, 8.1, 7, Linux, or MacOS
+Visual Studio 2017 or Visual Studio 2015 Update 3 (on Windows)
+Git
+Optional: CMake 3.12.4
+To get started:
+
+> git clone https://github.com/Microsoft/vcpkg.git
+> cd vcpkg
+
+PS> .\bootstrap-vcpkg.bat
+Linux:~/$ ./bootstrap-vcpkg.sh
+Then, to hook up user-wide integration, run (note: requires admin on first use)
+
+PS> .\vcpkg integrate install
+Linux:~/$ ./vcpkg integrate install
+Install any packages with
+
+PS> .\vcpkg install sdl2 curl
+Linux:~/$ ./vcpkg install sdl2 curl
+
+
+2、安装openssl
+vcpkg install openssl
+
+如果要安装64位版本，使用以下命令：
+vcpkg install openssl --triplet x64-windows
+或者设置系统环境变量：
+set VCPKG_DEFAULT_TRIPLET=x64-windows
+vcpkg install openssl
+
+3、vcpkg-rs编译所需环境变量
+在cmd环境执行：set VCPKGRS_DYNAMIC=1
