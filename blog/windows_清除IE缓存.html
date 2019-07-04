@@ -1,0 +1,32 @@
+<h1>清除IE缓存</h1>
+<h3>清除Internet临时文件</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8</h4>
+<h3>清除Cookies</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 2</h4>
+<h3>清除历史记录</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 1</h4>
+<h3>清除表单数据</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 16</h4>
+<h3>清除密码</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 32</h4>
+<h3>清除上述全部项目</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 255</h4>
+<h3>清除上述全部项目，以及IE7中使用的加载项所保存的各种数据</h3>
+<h4>RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 4351</h4>
+<h2>以下是取值</h2>
+<table><thead><tr><th> 取值 </th><th> 描述 </th></tr></thead><tbody>
+<tr><td> 1    </td><td> Browsing History </td></tr>
+<tr><td> 2    </td><td> Cookies </td></tr>
+<tr><td> 4    </td><td> Temporary Internet Files </td></tr>
+<tr><td> 8    </td><td> Offline favorites and download history </td></tr>
+<tr><td> 16   </td><td> Form Data </td></tr>
+<tr><td> 32   </td><td> Passwords </td></tr>
+<tr><td> 64   </td><td> Phishing Filter Data </td></tr>
+<tr><td> 128  </td><td> Web page Recovery Data </td></tr>
+<tr><td> 256  </td><td> Do not Show GUI when running the cache clear </td></tr>
+<tr><td> 512  </td><td> Do not use Multi-threading for deletion </td></tr>
+<tr><td> 1024 </td><td> Valid only when browser is in private browsing mode </td></tr>
+<tr><td> 2048 </td><td> Tracking Data </td></tr>
+<tr><td> 4096 </td><td> Data stored by add-ons </td></tr>
+<tr><td> 8192 </td><td> Preserves Cached data for Favorite websites </td></tr>
+</tbody></table>

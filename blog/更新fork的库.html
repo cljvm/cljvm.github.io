@@ -1,0 +1,41 @@
+<h1>更新fork的库</h1>
+<p>1、把需要更新的fork库克隆到本地
+git clone --depth 1 https://github.com/cljvm/shadowsocks-rust.git
+cd shadowsocks-rust</p>
+<p>2、使用 git remote -v 查询远程仓库
+git remote -v
+origin  https://github.com/cljvm/shadowsocks-rust.git (fetch)
+origin  https://github.com/cljvm/shadowsocks-rust.git (push)</p>
+<p>3、配置一个上游仓库
+git remote add upstream https://github.com/shadowsocks/shadowsocks-rust.git</p>
+<p>4、确认刚才添加的远程仓库
+git remote -v
+origin  https://github.com/cljvm/shadowsocks-rust.git (fetch)
+origin  https://github.com/cljvm/shadowsocks-rust.git (push)
+upstream        https://github.com/shadowsocks/shadowsocks-rust.git (fetch)
+upstream        https://github.com/shadowsocks/shadowsocks-rust.git (push)</p>
+<p>5、从上游仓库(upstream) fetch更新，并存储到本地分支的upstream/master
+git fetch upstream
+remote: Enumerating objects: 2698, done.
+remote: Counting objects: 100% (2698/2698), done.
+remote: Compressing objects: 100% (790/790), done.
+Receiving objects:  97% (2552/2630), 652.00 KiB | 312.00 KiB/s   reused 0
+Receiving objects: 100% (2630/2630), 700.94 KiB | 312.00 KiB/s, done.
+Resolving deltas: 100% (1868/1868), completed with 55 local objects.
+From https://github.com/shadowsocks/shadowsocks-rust</p>
+<ul>
+<li>[new branch]      coio            -&gt; upstream/coio</li>
+<li>[new branch]      master          -&gt; upstream/master</li>
+<li>[new tag]         v1.7.0-alpha.17 -&gt; v1.7.0-alpha.17</li>
+<li>[new tag]         v1.7.0-alpha.10 -&gt; v1.7.0-alpha.10</li>
+<li>[new tag]         v1.7.0-alpha.12 -&gt; v1.7.0-alpha.12</li>
+<li>[new tag]         v1.7.0-alpha.13 -&gt; v1.7.0-alpha.13</li>
+<li>[new tag]         v1.7.0-alpha.14 -&gt; v1.7.0-alpha.14</li>
+<li>[new tag]         v1.7.0-alpha.15 -&gt; v1.7.0-alpha.15</li>
+</ul>
+<p>6、切换到本地主分支
+git checkout master</p>
+<p>7、将从上游仓库更新的文件合并到本地主分支
+git merge upstream/master</p>
+<p>8、更新到 GitHub 的 fork 上
+git push origin master</p>
