@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>Kivicube Web版AR插件快速接入</title>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background-color: #ccc;
+            }
+            iframe {
+                width: 100vw;
+                height: calc(100vw * (4 / 3));
+                /* 应始终配置border: none;消除浏览器自带的iframe边框 */
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe
+            id="kivicubeScene"
+            scene-id="mbBZ3mVe93nnGQ3qF1qtUyOg0uJAtUuz"
+            hide-logo
+            hide-title
+            hide-download
+            hide-loading
+            hide-scan
+            hide-take-photo
+            hide-background
+            title="Kivicube XR Scene"
+        ></iframe>
+
+        <script>
+            if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+              var tipText = "当前网页需要运行在https协议上！\n否则iframe之中的网页因无法打开摄像头，而会出现类似“仅支持iOS11及以上系统”的相关提示。\n参考说明：https://www.yuque.com/kivicube/manual/web-ar-plugin-quick-start#ODr5h";
+              console.error(tipText);
+              alert(tipText);
+            }
+        </script>
+        <script type="text/javascript" src="https://www.kivicube.com/lib/iframe-plugin.js"></script>
+        <script>
+            const kivicubeScene = document.querySelector("#kivicubeScene");
+
+            kivicubeScene.addEventListener("load", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("error", (e) => {
+                console.error(e.type, e.detail);
+            });
+            kivicubeScene.addEventListener("ready", (e) => {
+                console.log(e.type, e.detail);
+            });
+            kivicubeScene.addEventListener("downloadAssetStart", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("downloadAssetProgress", (e) => {
+                console.log(e.type, e.detail);
+            });
+            kivicubeScene.addEventListener("downloadAssetEnd", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("loadSceneStart", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("loadSceneEnd", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("sceneStart", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("tracked", (e) => {
+                console.log(e.type);
+            });
+            kivicubeScene.addEventListener("lostTrack", (e) => {
+                console.log(e.type);
+            });
+        </script>        
+    </body>
+</html>
